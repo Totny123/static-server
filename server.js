@@ -34,7 +34,7 @@ var server = http.createServer(function (request, response) {
     ".jpg": "image/jpeg",
     ".mp4": "video/mp4",
   };
-  response.setHeader("Content-Type", `${types[houzui]};charset=utf-8`);
+  response.setHeader("Content-Type", `${types[houzui]||'text/html'};charset=utf-8`);
 
   let result;
   try {
